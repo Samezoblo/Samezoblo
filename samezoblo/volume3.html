@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+<div class="mouse" id="mouse">
+        <img src="cursor.png" alt="">
+    </div>
+
+<style>
+body {background-color: #003366;}
+@font-face { font-family: dot gothic; src: url('DotGothic16-Regular.ttf'); }
+@font-face { font-family: BPG No9; src: url('bpg_no9.ttf'); } 
+
+body {
+  background-image:url('hat2.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+
+
+
+
+ html {
+
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            overflow-y: scroll; 
+        }
+
+        * {
+            cursor: none;
+
+        }
+
+        .mouse {
+            width: 10px;
+            height: 10px;
+            background-color: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .mouse img {
+            width: 55px;
+        }
+
+
+h1   {color: white;}
+h1   {font-family: BPG No9;}
+
+p    {color: white;}
+p    {font-family: dot gothic;}
+p    {font-size:20px}
+
+
+p1   {color: white;}
+p1   {font-family: dot gothic;}
+p1   {font-size:18px}
+
+/* unvisited link */
+      a:link {
+        color: #F8F8FF;
+      }
+      /* visited link */
+      a:visited {
+        color: #F8F8FF;
+      }
+      /* mouse over link */
+      a:hover {
+        color: #7CFC00;
+      }
+
+</style>
+
+<script>
+        document.onmousemove = function (e) {
+            var mouse = document.getElementById("mouse");
+            console.log(mouse.style);
+            mouse.style.left = e.pageX + 1 + "px";
+            mouse.style.top = e.pageY + 1 + "px";
+        }
+    </script>
+
+<title>სამეზობლო</title>
+</head>
+
+
+<div class="row">
+<div align="center">
+ <div class="column">
+    <img src="volume3/1.jpg" alt="page1" style="width:30%">
+  </div>
+<br>
+
+ <div class="column">
+    <img src="volume3/2.jpg" alt="page1" style="width:55%">
+  </div>
+<br>
+
+ <div class="column">
+    <img src="volume3/3.jpg" alt="page1" style="width:55%">
+</div>
+<br>
+
+
+ <div class="column">
+    <img src="volume3/4.jpg" alt="page1" style="width:55%">
+</div>
+<br>
+
+ <div class="column">
+    <img src="volume3/5.jpg" alt="page1" style="width:55%">
+</div>
+<br>
+
+ <div class="column">
+    <img src="volume3/6.jpg" alt="page1" style="width:55%">
+</div>
+<br>
+
+ <div class="column">
+    <img src="volume3/7.jpg" alt="page1" style="width:30%">
+
+<p1 align="center">
+<p1 style="font-family:dot gothic"> 
+<pre>
+Samezoblo Magazine Vol 3
+
+Format: A4
+
+Pages: 16
+
+<a href="https://www.instagram.com/expressoyeah/">Contact</a> to order.
+</pre>
+</p>
+<br>
+</p1>
+
+</div>
+
+
+
+<p align="center"><a href="./volumes.html"> Volumes </a>
+<br>
+<br>
+</p>
+
+
+</body>
+</html>

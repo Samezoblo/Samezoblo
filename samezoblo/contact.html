@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+
+<div class="mouse" id="mouse">
+        <img src="cursor.png" alt="">
+    </div>
+
+<style>
+
+@font-face { font-family: dot gothic; src: url('DotGothic16-Regular.ttf'); } 
+
+body {background-color: black;}
+body {
+  background-image: url('contact.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+
+ html {
+
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            
+        }
+
+        * {
+            cursor: none;
+
+        }
+
+        .mouse {
+            width: 10px;
+            height: 10px;
+            background-color: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .mouse img {
+            width: 55px;
+        }
+
+
+h1   {color: white;}
+
+p    {color: white;}
+p    {font-family:dot gothic;}
+p    {font-size: 21px;}
+
+
+/* unvisited link */
+      a:link {
+        color: #F8F8FF;
+      }
+      /* visited link */
+      a:visited {
+        color: #F8F8FF;
+      }
+      /* mouse over link */
+      a:hover {
+        color: #7CFC00;
+      }
+
+
+</style>
+
+ <script>
+        document.onmousemove = function (e) {
+            var mouse = document.getElementById("mouse");
+            console.log(mouse.style);
+            mouse.style.left = e.pageX + 1 + "px";
+            mouse.style.top = e.pageY + 1 + "px";
+        }
+    </script>
+
+
+<title>სამეზობლო</title>
+</head>
+
+<body>
+
+<p align="right"> D.M
+
+</p>
+
+<p align="right"> 
+
+<a href="https://instagram.com/expressoyeah/" style="text-decoration: none"> @expressoyeah </a>
+
+</p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p align="left"> <a href="./index.html"> Main </a>
+
+</p>
+
+
+</body>
+</html>
