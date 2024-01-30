@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+<div class="mouse" id="mouse">
+        <img src="cursor.png" alt="">
+    </div>
+
+<style>
+body {background-color: black;}
+
+
+body {
+  background-image: url('Index/pallone inverso.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+
+ html {
+
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            
+        }
+
+        * {
+            cursor: none;
+
+        }
+
+        .mouse {
+            width: 10px;
+            height: 10px;
+            background-color: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .mouse img {
+            width: 55px;
+        }
+
+a, u {
+  text-decoration: none;
+}
+
+a:visited { text-decoration: none; color:white; }
+a:hover { text-decoration: none; color:white; }
+a:focus { text-decoration: none; color:white; }
+a:hover, a:active { text-decoration: none; color:white }
+
+@font-face { font-family: inconsolata; src: url('Inconsolata.ttf'); } 
+@font-face { font-family: Dot Gothic; src: url('DotGothic16.ttf'); } 
+
+
+
+h1   {color: white;}
+
+p  {color: white;}
+p  {font-family: inconsolata;}
+p  {font-size: 20 px}
+p  {text-align: justify;}
+
+
+h4   {color: white;}
+h4   {font-family: Dot Gothic;}
+h4   {font-size:20px}
+h4   {text-align:center} 
+
+p {
+  margin: 1px 160px 15px 160px;
+
+
+
+/* unvisited link */
+      a:link {
+        color: #7CFC00;
+      }
+      /* visited link */
+      a:visited {
+        color: #7CFC00;
+      }
+      /* mouse over link */
+      a:hover {
+        color: #7CFC00;
+      }
+
+
+.center {
+  text-align: justify;
+}
+
+div {
+  line-height: 1.8;
+}
+
+p {
+  margin: 10px 5px 15px 100px;
+}
+
+ html {
+
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            overflow-y: scroll; 
+        }
+</style>
+
+ <script>
+        document.onmousemove = function (e) {
+            var mouse = document.getElementById("mouse");
+            console.log(mouse.style);
+            mouse.style.left = e.pageX + 1 + "px";
+            mouse.style.top = e.pageY + 1 + "px";
+        }
+    </script>
+
+<title>სამეზობლო</title>
+</head>
+
+<body>
+
+<br>
+<br>
+<br>
+
+<p class="ex1">
+      Samezoblo in Georgian language means neighborhood or more literally the place where the courtyards are. <br>
+The zine is an unconventional mode of representation of city ecologies: it provides a foreign perspective on <br> casual city life, its objects, and peculiarities, which became normal for the local eyes. Samezoblo reminds us, that each urban environment is unique and that uniqueness should be appreciated and/or preserved.<br>
+<br>
+The zine documents objects, which comprise a great part of everyday culture, but will never be officially <br> preserved as a cultural heritage. <br>
+<br>
+In this regard Samezoblo acts as an informal repository of such objects, which will be telling a story of NOW <br>
+through years spanning geographical borders.<br>
+      </p>
+<br>
+<h4><a href="./index.html"> 
+    <img src="Index/tv1.gif" alt="tv" width="180" height="180"> 
+   </a> 
+<h4>
+<a href= "./index.html"> Main Page </a>
+</h4>
+
+</body>
+</html>
