@@ -1,207 +1,130 @@
-<div class="mouse" id="mouse"><img src="cursor.png" alt="cursor"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>სამეზობლო</title>
+
 <style>
-
-
-body {background-color: black;}
+/* --- Background --- */
 body {
-  background-image: url('Index/index image.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;  
-  background-size: cover;
+    background-color: black;
+    background-image: url('Index/index image.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
 }
 
-
-
- html {
-
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-           
-        }
-
-        * {
-            cursor: none;
-
-        }
-
-        .mouse {
-            width: 10px;
-            height: 10px;
-            background-color: none;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-        }
-
-        .mouse img {
-            width: 55px;
-        }
-
+/* --- Custom Fonts --- */
 @font-face { font-family: BPG No9; src: url('bpg_no9.ttf'); } 
 @font-face { font-family: dot gothic; src: url('DotGothic16.ttf'); } 
-@font-face { font-family: dejavu; src: url('Dejavu.ttf'); } 
+@font-face { font-family: dejavu; src: url('Dejavu.ttf'); }  
 
+/* --- Headings --- */
+h1 { color: white; font-family: BPG No9; font-size: 50px; text-align: center; text-shadow: 3px 3px 4px grey; margin: 20px 0; }
+h2 { color: white; font-family: dot gothic; font-size: 40px; text-align: center; text-shadow: 3px 3px 4px grey; margin: 10px 0; }
+h3 { color: white; font-family: dejavu; font-size: 30px; text-align: center; text-shadow: 3px 3px 4px grey; margin: 10px 0; }
 
-h1   {color: white;}
-h1   {font-family: BPG No9;}
-h1   {font-size: 50px}
-h1   {text-align: center;}
-h1 {text-shadow: 3px 3px 4px grey;}
+/* --- Paragraphs --- */
+p { color: white; font-family: dot gothic; font-size: 30px; margin: 10px; text-align: left; }
+p1 { color: white; font-family: BPG No9; font-size: 0px; margin-left: 650px; }
 
+/* --- Links --- */
+a { text-decoration: none !important; }
+a:link, a:visited { color: #F8F8FF; }
+a:hover { color: #7CFC00; }
 
-h2   {color: white;}
-h2   {font-family: dot gothic;}
-h2   {font-size: 40px}
-h2   {text-align: center;}
-h2 {text-shadow: 3px 3px 4px grey;}
-
-h3   {color: white;}
-h3   {font-family: dejavu;}
-h3   {font-size: 30px !Important;}
-h3   {text-align: center;}
-h3 {text-shadow: 3px 3px 4px grey;}
-
-h4   {color: white;}
-h4   {font-family: BPG No9;}
-h4   {font-size: 30px;}
-h4   {text-align: center;}
-h4 {text-shadow: 3px 3px 4px grey;}
-
-
-p   {color: white;}
-p   {font-family: dot gothic ;}
-p   {font-size: 30 px}
-p   {text-align: bottom;}
-p   { margin: 10px; }
-
-
-p1   {color: white;}
-p1   {font-family: BPG No9 ;}
-p1   {font-size: 0 px !Important;}
-p1   {text-align: top}
-p1   { margin-left: 650px; }
-
-div.parent {
-  position: relative;
-  height: 0px;
-  border: 0px;
-}
-div.absolute {
-  position: absolute;
-  width: 100%;
-  bottom: -250px;
-  border: 0px solid  #ffffff;
-} 
-
-
-a {
-  text-decoration: none !important;
-}
-
- /* unvisited link */
-      a:link {
-        color: #F8F8FF;
-      }
-      /* visited link */
-      a:visited {
-        color: #F8F8FF;
-      }
-      /* mouse over link */
-      a:hover {
-        color: #7CFC00;
-      }
-
-
- html {
-
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            overflow-y: scroll; 
-        }
-
-
-.grow img:hover{
--webkit-transform: scale(1.2);
--ms-transform: scale(1.2);
-transform: scale(1.2);
-transition: 1s ease;
-}
-
+/* --- Image Containers --- */
 .image-row {
-  display: flex;
-  justify-content: space-between; 
+    display: flex;
+    flex-wrap: wrap; /* wrap on small screens */
+    justify-content: space-around;
+    gap: 20px;
 }
 
-.absolute{
-  position: absolute;
-  bottom: 0;
-  right: 0;
+.grow img {
+    width: 100%;
+    height: auto; /* maintain aspect ratio */
+    max-width: 730px;
+    transition: transform 1s ease;
 }
+
+.grow img:hover {
+    transform: scale(1.05);
+}
+
+/* --- Custom Cursor --- */
+* { cursor: none; }
+.mouse {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.mouse img { width: 55px; }
+
+/* --- Footer --- */
+div.parent { position: relative; height: 0; }
+div.absolute { position: absolute; bottom: 0; width: 100%; text-align: center; }
 
 </style>
+
 <script>
-        document.onmousemove = function (e) {
-            var mouse = document.getElementById("mouse");
-            console.log(mouse.style);
-            mouse.style.left = e.pageX + 1 + "px";
-            mouse.style.top = e.pageY + 1 + "px";
-        }
+document.onmousemove = function(e) {
+    var mouse = document.getElementById("mouse");
+    mouse.style.left = e.pageX + "px";
+    mouse.style.top = e.pageY + "px";
+}
 </script>
+</head>
 
+<body>
 
-<title>სამეზობლო</title>
-<br>
-<h1><a href="/belly 1.html" style="text-decoration: none">სამეზობლო ჟურნალი</a></h1>
-<h2>Samezoblo Magazine<br></h2>
+<div class="mouse" id="mouse"><img src="cursor.png" alt="cursor"></div>
+
+<h1><a href="/belly 1.html">სამეზობლო ჟურნალი</a></h1>
+<h2>Samezoblo Magazine</h2>
 
 <div class="image-row">
-  <div style="display: flex; justify-content: space-around; space-evenly">
     <div class="grow">
- 
- <a href="./about.html" style=""><img src="Index/About1.png" alt="About1" width="730" height="520">
-</a>
+        <a href="./about.html">
+            <img src="Index/About1.png" alt="About1">
+        </a>
     </div>
-  </div>
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-  <div style="display: flex; justify-content: flex-start; space-evenly">
     <div class="grow">
-     <a href="./volumes.html" style=""><img src="Index/ivolume.png" alt="About1" width="300" height="600"></a>
+        <a href="./volumes.html">
+            <img src="Index/ivolume.png" alt="Volume">
+        </a>
     </div>
-  </div>
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;
-<br>
 <div class="image-row">
-<div style="display: flex; justify-content: flex-start; space-evenly">
-<div class="grow">
-<a href="https://linktr.ee/primitivemixtapes"target="_blank"> <img src="Index/primitive.png" alt="primitive"></a>
-</div> </div>
+    <div class="grow">
+        <a href="https://linktr.ee/primitivemixtapes" target="_blank">
+            <img src="Index/primitive.png" alt="Primitive">
+        </a>
+    </div>
+    <div class="grow">
+        <a href="./collabs.html">
+            <img src="Index/collaborate.png" alt="Collaborate">
+        </a>
+    </div>
+</div>
 
-
-<div style="display: flex; justify-content: flex-start; space-evenly">
-<div class="grow">
-
-<a href="./collabs.html">
-<img src="Index/collaborate.png" alt="collaborate"></a>
-</div> </div> </div>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 <div class="parent">
-<div class="absolute">
-<h3>
-<font size="4">samezoblo@planetmail.net<br><br>
-<a href="https://www.instagram.com/expressoyeah">by Durante</a><br></font> </h3> </div></div>
-<p1><img src="Index/trashman.png" alt="trashman">
-</p>
+    <div class="absolute">
+        <h3>
+            <font size="4">samezoblo@planetmail.net<br><br>
+            <a href="https://www.instagram.com/expressoyeah">by Durante</a></font>
+        </h3>
+    </div>
+</div>
+
+<p1><img src="Index/trashman.png" alt="trashman"></p1>
+
+</body>
+</html>
